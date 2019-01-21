@@ -13,7 +13,7 @@ layout: default
       {% for news_post in news_posts limit:5 %}
       <div class="carousel-item black white-text">
         <div class="row">
-          <img src="/assets/images/{{ news_post.image }}" class="col s12 m6" alt="{{news_post.image}}"/>
+          <img src="{{"/assets/images/" | append: news_post.image | relative_url }}" class="col s12 m6" alt="{{news_post.image}}"/>
           <div class="col s12 m6">
             <div class="card black">
               <div class="card-content">
