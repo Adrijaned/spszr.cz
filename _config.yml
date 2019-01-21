@@ -1,0 +1,11 @@
+title: VOŠ a SPŠ Žďár nad Sázavou
+description: >-
+  VOŠ a SPŠ ve Žďáře nad Sázavou patří k lídrům v oblasti technického vzdělávání v ČR.
+  Její vzdělávací činnost se opírá o aplikaci špičkových technologií, spolupráci s praxí a publikační reference.
+baseurl: ""
+url: "https://spszr.cz"
+
+# Build settings
+markdown: kramdown
+collections:
+  - news

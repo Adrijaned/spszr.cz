@@ -1,0 +1,24 @@
+---
+---
+body {
+  min-height: 100vh;
+  background: #555555;
+}
+
+main {
+  flex: 1 0 auto;
+  background: #ffffff;
+}
+
+#whole_page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

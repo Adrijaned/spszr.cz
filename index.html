@@ -1,0 +1,97 @@
+---
+layout: default
+---
+<!-- BEGIN Carousel -->
+<p></p> <!-- some space atop carousel to make it not stick to header -->
+<div class="row">
+  <div class="col l8 offset-l2 m12 s12">
+    <div class="carousel carousel-slider">
+      <div class="carousel-fixed-item center">
+        <a class="btn waves-effect red waves-light">Více...</a>
+      </div>
+      {% assign news_posts = site.news | sort | reverse %}
+      {% for news_post in news_posts limit:5 %}
+      <div class="carousel-item black white-text">
+        <div class="row">
+          <img src="/assets/images/{{ news_post.image }}" class="col s12 m6" alt="{{news_post.image}}"/>
+          <div class="col s12 m6">
+            <div class="card black">
+              <div class="card-content">
+                <span class="card-title no-select">{{news_post.title}}</span>
+              </div>
+              <div class="card-action">
+                <p class="right">{{news_post.author}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $(".carousel.carousel-slider").carousel({
+      fullWidth: true,
+      indicators: true
+    });
+  })
+</script>
+<!-- END Carousel -->
+<div class="row">
+  <div class="col s12 m6 l4">
+    <ul class="collection  with-header">
+      <li class="collection-header"><h6>Pro studenty</h6></li>
+      <li><a href="#" class="collection-item">Bakaláři</a></li>
+      <li><a href="#" class="collection-item">Rozvrh</a></li>
+      <li><a href="#" class="collection-item">Jídelníček</a></li>
+      <li><a href="#" class="collection-item">MS 365</a></li>
+      <li><a href="#" class="collection-item">Terminář</a></li>
+    </ul>
+  </div>
+  <div class="col s12 m6 l4">
+    <h5>Dny otevřených dveří:</h5>
+    {%- capture no_more_days -%}<p>Všechny dny otevřených dveří ve školním roce 2018/19 bohužel již proběhly. V případě
+    zájmu je však možno domluvit se na individuální prohlídce školy.</p>{%- endcapture -%}
+    <h6>Pracoviště Studentská:</h6>
+    {{- no_more_days -}}
+    <h6>Pracoviště Strojírenská:</h6>
+    <ul>
+      <li>
+        Pátek 18.1. 2019 od 8.00 do 16.00
+      </li>
+      <li>
+        Pondělí 1.5.2019 od 8.00 do 12.00
+      </li>
+    </ul>
+  </div>
+  <div class="col s12 m6 l4">
+    <h5>O škole:</h5>
+    <p>Naše škola se nachází ve Žďáře nad Sázavou, a sestává ze dvou pracovišť na ulicích Studentská a Strojírenská.
+      Jednotlivé naše studijní obory lze ukončit maturitou, výučním listem či absolutoriem s titulem DiS. Naše škola
+      dlouhodobě spolupracuje se mnoha českými i zahraničními školami všech úrovní vzdělávání, a dlouhodobě se zaměřuje
+      na propagaci odborného technického vzdělávání a technických oborů všeobecně.
+    </p>
+    <a class="btn waves-effect grey lighten-2 black-text waves-red" href="#">English</a>
+    <a class="btn waves-effect grey lighten-2 black-text waves-red" href="#">Deutsch</a>
+  </div>
+  <div class="col s12 m6 l4">
+    <ul class="collection  with-header">
+      <li class="collection-header"><h6>Studentské projekty</h6></li>
+      <li><a href="#" class="collection-item">Maturitní projekty</a></li>
+      <li><a href="#" class="collection-item">Nejzajímavější projekty</a></li>
+      <li><a href="#" class="collection-item">Studentský chopper</a></li>
+      <li><a href="#" class="collection-item">Roboti</a></li>
+    </ul>
+  </div>
+  <div class="col s12 m6 l4">
+    <h5>Volná pracovní místa</h5>
+    <p>VOŠ a SPŠ Žďár nad Sázavou přijme interního učitele pro výuku elektrotechnických předmětů a IT. Požadujeme
+      vysokoškolské vzdělání v oboru. <a href="#">Žádosti včetně životopisu zasílejte na adresu školy.</a></p>
+  </div>
+  <div class="col s12 m6 l4">
+    <h5>Nový design stránky</h5>
+    <p>Stále ve vývoji. Nahraďte tento text jakoukoliv dlouhodobější aktualitou.</p>
+  </div>
+</div>
