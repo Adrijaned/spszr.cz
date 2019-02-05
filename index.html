@@ -66,7 +66,7 @@ layout: default
       </li>
     </ul>
   </div>
-  <div class="col s12 m6 l4">
+  <div class="col l4 hide-on-med-and-down">{%- capture about_school -%}
     <h5>O škole:</h5>
     <p>Naše škola se nachází ve Žďáře nad Sázavou, a sestává ze dvou pracovišť na ulicích Studentská a Strojírenská.
       Jednotlivé naše studijní obory lze ukončit maturitou, výučním listem či absolutoriem s titulem DiS. Naše škola
@@ -74,16 +74,26 @@ layout: default
       na propagaci odborného technického vzdělávání a technických oborů všeobecně.
     </p>
     <a class="btn waves-effect grey lighten-2 black-text waves-red" href="#">English</a>
-    <a class="btn waves-effect grey lighten-2 black-text waves-red" href="#">Deutsch</a>
+    <a class="btn waves-effect grey lighten-2 black-text waves-red" href="#">Deutsch</a>{%- endcapture -%}{{ about_school }}
   </div>
-  <div class="col s12 m6 l4">
+</div>
+<div class="row hide-on-large-only">
+  <div class="col s12 m6">
+    {{ about_school }}
+  </div>
+  <div class="col s12 m6">{%- capture student_projects -%}
     <ul class="collection  with-header">
       <li class="collection-header"><h6>Studentské projekty</h6></li>
       <li><a href="#" class="collection-item">Maturitní projekty</a></li>
       <li><a href="#" class="collection-item">Nejzajímavější projekty</a></li>
       <li><a href="#" class="collection-item">Studentský chopper</a></li>
       <li><a href="#" class="collection-item">Roboti</a></li>
-    </ul>
+    </ul>{%- endcapture -%}
+    {{ student_projects }}
+  </div>
+</div>
+<div class="row">
+  <div class="col l4 hide-on-med-and-down">{{ student_projects }}
   </div>
   <div class="col s12 m6 l4">
     <h5>Volná pracovní místa</h5>
